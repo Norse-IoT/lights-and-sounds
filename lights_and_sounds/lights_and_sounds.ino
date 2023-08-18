@@ -2,11 +2,14 @@
 
 // originally from https://www.hackster.io/isaacnolt331/megalovania-on-piezo-fc263a
 
+const int reedSwitchPin = 17;
 
 void setup() {
-  for (int thisNote = 0; thisNote < Megalovania::melody_len; thisNote++) {
+  pinMode(reedSwitchPin, INPUT_PULLUP);
+}
+
+void loop() {
+  if (digitalRead(reedSwitchPin) == LOW) {
     Megalovania::playNextNote();
   }
 }
-
-void loop() {}

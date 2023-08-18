@@ -362,6 +362,7 @@ const int melody_len = sizeof(melody) / sizeof(melody[0]);
 namespace { // private namespace
   int currentNote = 0;
   int nextNote() {
+    currentNote %= melody_len;
     return currentNote++;
   }
 }
