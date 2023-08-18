@@ -1,4 +1,5 @@
 // yoinked from https://www.hackster.io/isaacnolt331/megalovania-on-piezo-fc263a
+#pragma once
 
 #define N_B0  31
 #define N_C1  33
